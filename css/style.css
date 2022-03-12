@@ -1,3 +1,8 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 html {
   margin: 0;
   padding: 0;
@@ -32,7 +37,6 @@ header {
   width: 100vw;
   text-align: center;
   text-transform: uppercase;
-  font-size: 2rem;
 }
 
 header,
@@ -62,27 +66,21 @@ header::before {
   position: absolute;
   text-align: left;
   line-height: normal;
+  animation-duration: 1000ms;
+  animation-name: slidein;
 }
 
 .landing .title {
   font-weight: var(--fw-titles);
   margin: 0;
   padding: 0;
-  1em
+  font-size: 3em;
 }
 
 .landing .text {
   font-weight: var(--fw-text);
-  font-size: 0.87em;
+  font-size: 1.5rem;
   margin: 0;
-}
-
-.navbar {
-  margin: 0px;
-  height: 15vh;
-  background-color: var(--clr-background);
-  position: fixed;
-  position: sticky;
 }
 
 .nav {
@@ -91,7 +89,9 @@ header::before {
   padding-top: 0.75vh;
   list-style: none;
   float: right;
-  padding-right: 2vw;
+  padding-right: 4vw;
+  position: fixed;
+  position: sticky;
 }
 
 .nav-button {
@@ -101,6 +101,9 @@ header::before {
 .nav-link {
   text-decoration: none;
   color: white;
+  font-size: 0.9em;
+  animation-duration: 1000ms;
+  animation-name: slidein;
 }
 
 .container {
@@ -113,24 +116,50 @@ header::before {
   padding: 40px;
   width: 100%;
   height: 100vh;
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  padding-top: 10vh;
 }
 
-.container .title {
+.square {
+  background-color: #35363a;
+  max-width: 75%;
+  border-radius: 1vw;
+  padding: 1vh;
+  margin-top: 1vh;
+}
+
+.square:hover {
+  animation-name: squaresize;
+  animation-duration: 500ms;
+  width: 50vw;
+  animation-timing-function: ease-in-out;
+}
+
+.square .title {
+  text-align: center;
   font-weight: var(--fw-titles);
-  font-size: 2em;
 }
 
-.landing .title {
-  animation-duration: 1000ms;
-  animation-name: slidein;
-}
+/* animation keyframes */
 
 @keyframes slidein {
   from {
-      font-size: 0;
+    font-size: 0;
   }
 
   to {
-    
+  }
+}
+
+@keyframes squaresize {
+  from {
+    width: 33vw;
+  }
+
+  to {
+    width: 50vw;
   }
 }
