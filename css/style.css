@@ -107,40 +107,91 @@ header::before {
 }
 
 .container {
+  display: flex;
   z-index: 2;
   position: absolute;
   top: 100vh;
   background-color: var(--clr-background);
   line-height: 30px;
   font-weight: lighter;
-  padding: 40px;
   width: 100%;
-  height: 100vh;
-  display: grid;
+  height: auto;
+  min-height: 50vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
   padding-top: 10vh;
+  margin-right: 10vw;
+  padding-left: 5vw;
+  grid-auto-rows: max-content;
 }
 
 .square {
+  width: 20vw;
+  margin-right: 1vw;
+  margin-left: 1vw;
   background-color: #35363a;
-  max-width: 75%;
   border-radius: 1vw;
   padding: 1vh;
   margin-top: 1vh;
-}
-
-.square:hover {
-  animation-name: squaresize;
-  animation-duration: 500ms;
-  width: 50vw;
-  animation-timing-function: ease-in-out;
+  box-shadow: 0px 0px 18px -3px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding-bottom: 2vh;
 }
 
 .square .title {
-  text-align: center;
   font-weight: var(--fw-titles);
+}
+
+.grid-container {
+  width: 100%;
+}
+
+.square .text {
+  font-weight: var(--fw-text);
+}
+
+.square a {
+  text-decoration: none;
+  color: #35363a;
+  font-weight: var(--fw-titles);
+  background-color: white;
+  padding: 1vw;
+  border-radius: 15px;
+  border: white;
+}
+
+.square a:hover {
+  animation-name: button;
+  animation-duration: 1000ms;
+  background-color: #35363a;
+  color: white;
+  border-radius: 15px;
+  outline-style: solid;
+  outline-width: 2.5px;
+  outline-color: white;
+}
+
+.footer {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  background-color: black;
+  line-height: 30px;
+  font-weight: lighter;
+  width: 100%;
+  height: 20vh;
+  padding-top: 60vh;
+  text-align: center;
+}
+
+.footer .title {
+  font-weight: var(--fw-titles);
+  text-align: center;
+  padding-left: 42%;
+  padding-right: 40%;
 }
 
 /* animation keyframes */
@@ -154,12 +205,19 @@ header::before {
   }
 }
 
-@keyframes squaresize {
+@keyframes button {
   from {
-    width: 33vw;
+    text-decoration: none;
+    color: #35363a;
+    font-weight: var(--fw-titles);
+    background-color: white;
+    padding: 1vw;
+    border-radius: 15px;
   }
-
   to {
-    width: 50vw;
+    background-color: #35363a;
+    outline-style: solid;
+    outline-width: 2.5px;
+    outline-color: white;
   }
 }

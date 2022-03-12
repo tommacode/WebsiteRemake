@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,21 +16,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The New Site is Ready</title>
+    <script>
+      $(function () {
+        $("#footer").load("standardelements/footer.html");
+        $("#nav").load("standardelements/nav.html");
+      });
+    </script>
   </head>
   <body>
     <header>
-      <div class="navbar">
-        <ul class="nav">
-          <li class="nav-button"><a href="" class="nav-link">Home</a></li>
-          <li class="nav-button"><a href="" class="nav-link">Projects</a></li>
-          <li class="nav-button">
-            <a href="" class="nav-link">Computer Specs</a>
-          </li>
-          <li class="nav-button">
-            <a href="" class="nav-link">Information</a>
-          </li>
-        </ul>
-      </div>
+      <div id="nav"></div>
       <div class="landing">
         <h1 class="title">Tom's Website</h1>
         <p class="text">Imagine..</p>
@@ -34,14 +33,21 @@
     </header>
     <div class="container">
       <div class="square">
-        <h2 class="title">Projects</h1>
+        <h2 class="title">Projects</h2>
+        <p class="text">test</p>
+        <a href="">Read More</a>
       </div>
       <div class="square">
-        <h2 class="title">Computer Specs</h1>
+        <h2 class="title">Computer Specs</h2>
+        <p class="text">epic Website</p>
+        <a href="">Read More</a>
       </div>
       <div class="square">
-        <h2 class="title">Information</h1>
+        <h2 class="title">Information</h2>
+        <p class="text">epic site</p>
+        <a href="">Read More</a>
       </div>
     </div>
+    <div id="footer"></div>
   </body>
 </html>
