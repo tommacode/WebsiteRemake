@@ -1,0 +1,136 @@
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  --fw-titles: 500;
+  --fw-text: 300;
+  --clr-background: #202124;
+  --clr-accent: #4e87f2;
+}
+
+body {
+  color: white;
+  margin: 0;
+  padding: 0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: var(--clr-background);
+}
+
+header {
+  box-sizing: border-box;
+  min-height: 100vh;
+  position: relative;
+  transform-style: inherit;
+  width: 100vw;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+header,
+header:before {
+  background: 50% 50% / cover;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background: url(/images/landing.jpg);
+  background-size: cover;
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  min-height: 100vh;
+}
+
+.landing {
+  padding-top: 40vh;
+  padding-left: 10vw;
+  position: absolute;
+  text-align: left;
+  line-height: normal;
+}
+
+.landing .title {
+  font-weight: var(--fw-titles);
+  margin: 0;
+  padding: 0;
+  1em
+}
+
+.landing .text {
+  font-weight: var(--fw-text);
+  font-size: 0.87em;
+  margin: 0;
+}
+
+.navbar {
+  margin: 0px;
+  height: 15vh;
+  background-color: var(--clr-background);
+  position: fixed;
+  position: sticky;
+}
+
+.nav {
+  display: inline;
+  display: flex;
+  padding-top: 0.75vh;
+  list-style: none;
+  float: right;
+  padding-right: 2vw;
+}
+
+.nav-button {
+  padding-left: 5vw;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  z-index: 2;
+  position: absolute;
+  top: 100vh;
+  background-color: var(--clr-background);
+  line-height: 30px;
+  font-weight: lighter;
+  padding: 40px;
+  width: 100%;
+  height: 100vh;
+}
+
+.container .title {
+  font-weight: var(--fw-titles);
+  font-size: 2em;
+}
+
+.landing .title {
+  animation-duration: 1000ms;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+      font-size: 0;
+  }
+
+  to {
+    
+  }
+}
