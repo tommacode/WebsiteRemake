@@ -104,6 +104,18 @@ header::before {
   font-size: 0.9em;
   animation-duration: 1000ms;
   animation-name: slidein;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    linear-gradient(to top, #ffffff, #ffffff);
+  background-size: 10% 1em, 0 0.15em;
+  background-position: 50% 100%, 50% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+  padding-bottom: 5px;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-size: 0 1em, 75% 0.15em;
 }
 
 .container {
@@ -137,6 +149,7 @@ header::before {
   box-shadow: 0px 0px 18px -3px rgba(255, 255, 255, 0.1);
   text-align: center;
   padding-bottom: 2vh;
+  margin-bottom: 3vh;
 }
 
 .square .title {
@@ -156,8 +169,8 @@ header::before {
   color: #35363a;
   font-weight: var(--fw-titles);
   background-color: white;
-  padding: 1vw;
-  border-radius: 15px;
+  padding: 10px;
+  border-radius: 8px;
   border: white;
 }
 
@@ -177,21 +190,40 @@ header::before {
   background-color: black;
   display: flex;
   z-index: 1;
-  position: absolute;
   background-color: black;
-  line-height: 30px;
-  font-weight: lighter;
+  line-height: 10px;
   width: 100%;
-  height: 20vh;
-  padding-top: 60vh;
+  height: 25vh;
   text-align: center;
+  display: inline-block;
+  position: absolute;
+  padding-top: 75vh;
 }
 
 .footer .title {
   font-weight: var(--fw-titles);
   text-align: center;
-  padding-left: 42%;
-  padding-right: 40%;
+  font-size: 2em;
+}
+
+.icon-container .icon {
+  margin: 0.5vw;
+  width: 32px;
+}
+
+.bold {
+  font-weight: var(--fw-titles);
+}
+
+.list {
+  text-align: left;
+  list-style: none;
+}
+
+.square .subtitle {
+  font-weight: var(--fw-titles);
+  text-align: left;
+  padding-left: 1vw;
 }
 
 /* animation keyframes */
@@ -211,13 +243,44 @@ header::before {
     color: #35363a;
     font-weight: var(--fw-titles);
     background-color: white;
-    padding: 1vw;
-    border-radius: 15px;
+    padding: 10px;
+    border-radius: 8px;
   }
   to {
     background-color: #35363a;
     outline-style: solid;
     outline-width: 2.5px;
     outline-color: white;
+    padding: 10px;
+    border-radius: 8px;
+  }
+}
+
+/* media statements */
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .square {
+    width: 35vw;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    background-color: #35363a;
+    border-radius: 1vw;
+    padding: 1vh;
+    margin-top: 1vh;
+    box-shadow: 0px 0px 18px -3px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding-bottom: 2vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .square {
+    width: 80vw;
   }
 }

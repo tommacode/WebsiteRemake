@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tom's Website | Information</title>
+    <script>
+      $(function () {
+        $("#footer").load("../standardelements/footer.html");
+        $("#nav").load("../standardelements/nav.html");
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div id="nav"></div>
+      <div class="landing">
+        <h1 class="title">Changelog</h1>
+        <p class="text">What I am doing to the website</p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="square">
+        <h2 class="title">Changelog</h2>
+        <ul class="list">
+          <li class="text">Complete redesign of the website</li>
+          <li class="text">
+            Better animations on the buttons when you hover over them
+          </li>
+          <li class="text">When the page loads there are animations</li>
+          <li class="text">Added website page</li>
+        </ul>
+      </div>
+      <div class="square">
+        <h2 class="title">The Plans</h2>
+        <p class="text">
+          The website should stay on this domain hosted on the same server. The
+          design shouldn't change much given that this design is quite nice. The
+          only reason this website might change is if I find a really cool
+          design. In this case the website might change but the information
+          should be kept the same. Hoever the information will be slowly updated
+          as time goes on.
+        </p>
+      </div>
+
+      <div class="square">
+        <h2 class="title">Information</h2>
+        <p class="text">
+          This website is hosted on Microsoft Azure on a static web app. This
+          means that I am only paying for the domain. I also didn't use a
+          website builder because they normally cost money
+        </p>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tom's Website | Computer specs</title>
+    <script>
+      $(function () {
+        $("#footer").load("../standardelements/footer.html");
+        $("#nav").load("../standardelements/nav.html");
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div id="nav"></div>
+      <div class="landing">
+        <h1 class="title">Computer Specs</h1>
+        <p class="text">These are all my computers</p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="square">
+        <h2 class="title">Main Setup</h2>
+        <ul class="list">
+          <li class="text">
+            <span class="bold">Motherboard: </span>Asrock B450m Pro 4
+          </li>
+          <li class="text"><span class="bold">CPU: </span>Ryzen 5 2600</li>
+          <li class="text">
+            <span class="bold">Cooler: </span>Hyper 212 (Black Edition)
+          </li>
+          <li class="text">
+            <span class="bold">RAM: </span>Corsair Vengence LPX 32GB Black (4X8)
+          </li>
+          <li class="text"><span class="bold">GPU: </span>Nvidia RTX 2060</li>
+          <li class="text"><span class="bold">PSU: </span>Corsair RM 750</li>
+          <li class="text">
+            <span class="bold">Storage: </span>240GB SSD, 1TB SSD, 2TB HDD
+          </li>
+          <li class="text">
+            <span class="bold">Case: </span>Corsair 4000D (White)
+          </li>
+        </ul>
+        <h3 class="subtitle">Monitors:</h3>
+        <ul class="list">
+          <li class="text">
+            <span class="bold">Main Monitor: </span>BenQ Zowie 144hz (1920x1080)
+          </li>
+          <li class="text">
+            <span class="bold">Secondary: </span>Delll SE2219H (1920x1080)
+          </li>
+          <li class="text">
+            <span class="bold">Mounting </span>Cheap arm of amazon and a vesa
+            adapter that just essentaily grabs the monitor for the secondary
+            monitor
+          </li>
+        </ul>
+      </div>
+      <div class="square">
+        <h2 class="title">Laptop</h2>
+        <ul class="list">
+          <li class="text">
+            <span class="bold">Motherboard: </span>Idk (it is a laptop)
+          </li>
+          <li class="text"><span class="bold">CPU: </span>Intel i5 9300h</li>
+          <li class="text">
+            <span class="bold">Cooler: </span>Standard bad laptop cooling
+          </li>
+          <li class="text"><span class="bold">RAM: </span>8GB</li>
+          <li class="text"><span class="bold">GPU: </span></li>
+          Nvidia GTX 1660ti
+          <li class="text"><span class="bold">PSU: </span></li>
+          It just has a power brick on the cable
+          <li class="text">
+            <span class="bold">Storage: </span>256GB NVMe SSD, 1TB HDD
+          </li>
+          <li class="text">
+            <span class="bold">Model: </span>Acer Predator Helios 300
+          </li>
+        </ul>
+      </div>
+      <div class="square">
+        <h2 class="title">Mobile Devices</h2>
+        <p class="text">Comming Soon</p>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>
