@@ -1,3 +1,4 @@
+/* General Initalisations */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,13 +23,68 @@ body {
   padding: 0;
   perspective: 1px;
   transform-style: preserve-3d;
-  height: 100%;
-  width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
   background-color: var(--clr-background);
 }
 
+/* Navigation */
+.logo {
+  font-weight: var(--fw-text);
+  float: left;
+  padding-left: 2vw;
+  padding-top: 2.5vh;
+}
+
+.navbar {
+  width: 100%;
+  height: 7.5vh;
+  background-color: var(--clr-background);
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  position: absolute;
+  background-color: var(--clr-background);
+  line-height: 30px;
+  width: 100%;
+  min-height: 7.5vh;
+}
+
+.nav {
+  display: inline;
+  display: flex;
+  padding-top: 0.7vh;
+  list-style: none;
+  float: right;
+  padding-right: 4vw;
+  font-weight: var(--fw-titles);
+}
+
+.nav-button {
+  padding-left: 5vw;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+  animation-duration: 1000ms;
+  animation-name: slidein;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    linear-gradient(to top, #ffffff, #ffffff);
+  background-size: 10% 1em, 0 0.15em;
+  background-position: 50% 100%, 50% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+  padding-bottom: 5px;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-size: 0 1em, 75% 0.15em;
+}
+
+/* Header */
 header {
   box-sizing: border-box;
   min-height: 100vh;
@@ -83,41 +139,7 @@ header::before {
   margin: 0;
 }
 
-.nav {
-  display: inline;
-  display: flex;
-  padding-top: 0.75vh;
-  list-style: none;
-  float: right;
-  padding-right: 4vw;
-  position: fixed;
-  position: sticky;
-}
-
-.nav-button {
-  padding-left: 5vw;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: white;
-  font-size: 0.9em;
-  animation-duration: 1000ms;
-  animation-name: slidein;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    linear-gradient(to top, #ffffff, #ffffff);
-  background-size: 10% 1em, 0 0.15em;
-  background-position: 50% 100%, 50% 100%;
-  background-repeat: no-repeat;
-  transition: background-size 400ms;
-  padding-bottom: 5px;
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  background-size: 0 1em, 75% 0.15em;
-}
-
+/* Container Squares */
 .container {
   display: flex;
   z-index: 2;
@@ -156,6 +178,12 @@ header::before {
   font-weight: var(--fw-titles);
 }
 
+.square .subtitle {
+  font-weight: var(--fw-titles);
+  text-align: left;
+  padding-left: 1vw;
+}
+
 .grid-container {
   width: 100%;
 }
@@ -185,6 +213,7 @@ header::before {
   outline-color: white;
 }
 
+/* Footer */
 .footer {
   width: 100%;
   background-color: black;
@@ -197,7 +226,7 @@ header::before {
   text-align: center;
   display: inline-block;
   position: absolute;
-  padding-top: 75vh;
+  padding-top: 90vh;
 }
 
 .footer .title {
@@ -211,6 +240,7 @@ header::before {
   width: 32px;
 }
 
+/* Text Modification */
 .bold {
   font-weight: var(--fw-titles);
 }
@@ -220,10 +250,9 @@ header::before {
   list-style: none;
 }
 
-.square .subtitle {
-  font-weight: var(--fw-titles);
-  text-align: left;
-  padding-left: 1vw;
+.link {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* animation keyframes */
@@ -257,8 +286,7 @@ header::before {
 }
 
 /* media statements */
-
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -274,13 +302,19 @@ header::before {
     text-align: center;
     padding-bottom: 2vh;
   }
+  .footer {
+    padding-top: 130vh;
+  }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   .container {
     grid-template-columns: repeat(1, 1fr);
   }
   .square {
     width: 80vw;
+  }
+  .footer {
+    padding-top: 150vh;
   }
 }

@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script
-      type="text/javascript"
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,24 +12,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tom's Website | Projects</title>
-    <script>
-      $(function () {
-        $("#footer").load("../standardelements/footer.html");
-        $("#nav").load("../standardelements/nav.html");
-      });
-    </script>
   </head>
   <body>
     <header>
-      <div id="nav"></div>
+      <!--Navigation-->
+      <div class="navbar">
+        <a class="logo link" href="../index.html"
+          ><span class="bold">Tom </span>| Blake</a
+        >
+        <ul class="nav">
+          <li class="nav-button">
+            <a href="../index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-button">
+            <a href="../html/changelog.html" class="nav-link">Changelog</a>
+          </li>
+          <li class="nav-button">
+            <a href="../html/projects.html" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-button">
+            <a href="../html/specs.html" class="nav-link">Computer Specs</a>
+          </li>
+        </ul>
+      </div>
+
+      <!--Header text-->
       <div class="landing">
         <h1 class="title">Projects</h1>
         <p class="text">What I am doing and have done</p>
       </div>
     </header>
+
+    <!--Container with squares and text-->
     <div class="container">
       <div class="square">
-        <h2 class="title">Comming Soon</h2>
+        <h2 class="title">This Website</h2>
+        <p class="tex">
+          This website is made for two reasons. 1. To get away from the
+          un-maintainable mess that was the old website, on the old site there
+          was only four or so pages and I got lost in the code all the time. 2.
+          The old website was quite bad. By bad I mean that there was not much
+          that I could improve on.
+        </p>
       </div>
       <div class="square">
         <h2 class="title">Comming Soon</h2>
@@ -42,6 +62,23 @@
         <h2 class="title">Comming Soon</h2>
       </div>
     </div>
-    <div id="footer"></div>
+
+    <!--Footer-->
+    <div class="footer">
+      <h3 class="title">Thanks for visiting</h3>
+      <div class="icon-container">
+        <a href="https://github.com/tommacode/WebsiteRemake"
+          ><img class="icon" src="/images/github.png" alt=""
+        /></a>
+        <a href=""><img class="icon" src="/images/instagram.png" alt="" /></a>
+      </div>
+      <p class="text">
+        Photo by
+        <a href="https://www.pexels.com/@wolfram-k-226511" class="link"
+          >Wolfram K</a
+        >
+        from <a href="pexels.com" class="link">Pexels</a>
+      </p>
+    </div>
   </body>
 </html>
