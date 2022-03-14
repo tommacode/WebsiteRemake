@@ -67,8 +67,8 @@ body {
 .nav-link {
   text-decoration: none;
   color: white;
-  font-size: 0.9em;
-  animation-duration: 1000ms;
+  font-size: 0.9rem;
+  animation-duration: 500ms;
   animation-name: slidein;
   background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     linear-gradient(to top, #ffffff, #ffffff);
@@ -77,6 +77,7 @@ body {
   background-repeat: no-repeat;
   transition: background-size 400ms;
   padding-bottom: 5px;
+  text-transform: uppercase;
 }
 
 .nav-link:hover,
@@ -92,7 +93,6 @@ header {
   transform-style: inherit;
   width: 100vw;
   text-align: center;
-  text-transform: uppercase;
 }
 
 header,
@@ -122,7 +122,7 @@ header::before {
   position: absolute;
   text-align: left;
   line-height: normal;
-  animation-duration: 1000ms;
+  animation-duration: 500ms;
   animation-name: slidein;
 }
 
@@ -316,5 +316,27 @@ header::before {
   }
   .footer {
     padding-top: 150vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+  .nav {
+    float: none;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .nav-link {
+    font-size: 3.5vw;
+    text-align: center;
+  }
+  .landing {
+    text-align: center;
+  }
+  .landing .text {
+    text-align: center;
   }
 }
