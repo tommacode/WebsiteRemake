@@ -192,7 +192,7 @@ header::before {
   font-weight: var(--fw-text);
 }
 
-.square a {
+.square .read-more {
   text-decoration: none;
   color: #35363a;
   font-weight: var(--fw-titles);
@@ -202,7 +202,7 @@ header::before {
   border: white;
 }
 
-.square a:hover {
+.square .read-more:hover {
   animation-name: button;
   animation-duration: 1000ms;
   background-color: #35363a;
@@ -211,6 +211,10 @@ header::before {
   outline-style: solid;
   outline-width: 2.5px;
   outline-color: white;
+}
+
+.affiliate {
+  color: white;
 }
 
 /* Footer */
