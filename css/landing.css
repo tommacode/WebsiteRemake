@@ -137,7 +137,7 @@ header::before {
   display: flex;
   z-index: 2;
   position: absolute;
-  top: 100vh;
+  top: 95vh;
   background-color: var(--clr-background);
   line-height: 30px;
   font-weight: lighter;
