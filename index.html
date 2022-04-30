@@ -34,12 +34,38 @@
     <title>Tom's website</title>
 
     <!--Meta Tags For sharing-->
-    <meta name="theme-color" content="#00ccff" />
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Tom Has A Website" />
+    <meta
+      name="description"
+      content="Check out the site! Doesnt have that much but it will be changing most weeks"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tomhasawebsite.com" />
+    <meta property="og:title" content="Tom Has A Website" />
     <meta
       property="og:description"
-      content="What an epic website for all to see"
+      content="Check out the site! Doesnt have that much but it will be changing most weeks"
     />
-    <meta property="description" content="Follow the progress on github" />
+    <meta
+      property="og:image"
+      content="https://tomhasawebsite.com/images/landing.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://tomhasawebsite.com" />
+    <meta property="twitter:title" content="Tom Has A Website" />
+    <meta
+      property="twitter:description"
+      content="Check out the site! Doesnt have that much but it will be changing most weeks"
+    />
+    <meta
+      property="twitter:image"
+      content="https://tomhasawebsite.com/images/landing.jpg"
+    />
   </head>
   <body>
     <header>
@@ -67,7 +93,7 @@
       <!--header text-->
       <div class="landing">
         <h1 class="title">Tom's Website</h1>
-        <p class="text">Imagine...</p>
+        <p id="date" class="text"></p>
       </div>
     </header>
 
@@ -118,5 +144,23 @@
         from <a href="pexels.com" class="link">Pexels</a>
       </p>
     </div>
+
+    <!--Scripts-->
+    <script>
+      const weekday = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      const d = new Date();
+      let day = weekday[d.getDay()];
+      console.log(day);
+      document.getElementById("date").innerHTML = "Have a nice " + day + "!";
+    </script>
   </body>
 </html>
