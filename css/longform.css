@@ -13,6 +13,7 @@ html {
   --fw-text: 300;
   --clr-background: #202124;
   --clr-accent: #4e87f2;
+  overflow-x: hidden;
 }
 
 body {
@@ -279,5 +280,8 @@ img {
   }
   .landing .text {
     text-align: center;
+  }
+  img {
+    display: none;
   }
 }
