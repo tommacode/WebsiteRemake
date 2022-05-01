@@ -65,35 +65,44 @@
 
     <!--Container with squares and text-->
     <div class="container">
+      <p style="font-weight: 300" onclick="ResetAll()">
+        <u>Reset All Boxes</u>
+      </p>
       <div class="square">
         <h2 class="title">Changelog</h2>
-        <ul class="list">
-          <li class="text"></li>
-          <li class="text">All squares span the full screen</li>
-          <li class="text">
-            Removed page animations on load because it was causing the webpage
-            to lag on mobile devices and even some computers
-          </li>
-          <li class="text">
-            Added meta tags on the index page so that on discord it gives some
-            info before the user even uses the website
-          </li>
-          <li class="text">
-            The links on the website should be easier to notice in text because
-            they look like buttons
-          </li>
-        </ul>
+        <p id="1" class="Expand">Expand</p>
+        <div id="1hide" class="hidden">
+          <ul class="list">
+            <li class="text"></li>
+            <li class="text">All squares span the full screen</li>
+            <li class="text">
+              Removed page animations on load because it was causing the webpage
+              to lag on mobile devices and even some computers
+            </li>
+            <li class="text">
+              Added meta tags on the index page so that on discord it gives some
+              info before the user even uses the website
+            </li>
+            <li class="text">
+              The links on the website should be easier to notice in text
+              because they look like buttons
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="square">
         <h2 class="title">The Plans</h2>
-        <p class="text">
-          The website should stay on this domain hosted on the same server. The
-          design shouldn't change much given that this design is quite nice. The
-          only reason this website might change is if I find a really cool
-          design. In this case the website might change but the information
-          should be kept the same. However the information will be slowly
-          updated as time goes on.
-        </p>
+        <p id="2" class="Expand">Expand</p>
+        <div id="2hide" class="hidden">
+          <p class="text">
+            The website should stay on this domain hosted on the same server.
+            The design shouldn't change much given that this design is quite
+            nice. The only reason this website might change is if I find a
+            really cool design. In this case the website might change but the
+            information should be kept the same. However the information will be
+            slowly updated as time goes on.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -116,5 +125,30 @@
         from <a href="pexels.com" class="link">Pexels</a>
       </p>
     </div>
+
+    <!--Scripts-->
+    <script>
+      const onClick = function () {
+        var elementID = this.id;
+        var formulatedString = this.id + "hide"; //string should be idhide for the element that should be hidden
+        var element = document.getElementById(formulatedString);
+        if (element.className == "hidden") {
+          element.className = "";
+          document.getElementById(this.id).innerHTML = "Hide";
+        } else {
+          element.className = "hidden";
+          document.getElementById(this.id).innerHTML = "Expand";
+        }
+      };
+      for (i = 1; i < 4; i++) {
+        document.getElementById(i).onclick = onClick;
+      }
+      function ResetAll() {
+        for (i = 1; i < 4; i++) {
+          document.getElementById(i + "hide").className = "hidden";
+          document.getElementById(i).innerHTML = "Expand";
+        }
+      }
+    </script>
   </body>
 </html>

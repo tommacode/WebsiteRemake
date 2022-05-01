@@ -2,6 +2,7 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -146,6 +147,7 @@ header::before {
   margin-right: 10vw;
   padding-left: 5vw;
   grid-auto-rows: max-content;
+  padding-left: 9vw;
 }
 
 .square {
@@ -214,7 +216,7 @@ header::before {
   background-color: black;
   line-height: 10px;
   width: 100%;
-  height: 25vh;
+  height: 50vh;
   text-align: center;
   display: inline-block;
   position: absolute;
@@ -270,9 +272,6 @@ header::before {
 
 /* media statements */
 @media only screen and (max-width: 1200px) {
-  .container {
-    grid-template-columns: repeat(1, 1fr);
-  }
   .square {
     margin-right: 1vw;
     margin-left: 1vw;
@@ -287,9 +286,6 @@ header::before {
 }
 
 @media only screen and (max-width: 800px) {
-  .container {
-    grid-template-columns: repeat(1, 1fr);
-  }
   .footer {
     padding-top: 90vh;
   }
@@ -314,5 +310,8 @@ header::before {
   }
   .landing .text {
     text-align: center;
+  }
+  .footer {
+    padding-top: 159vh;
   }
 }

@@ -65,88 +65,101 @@
 
     <!--Container with squares and text-->
     <div class="container">
+      <p style="font-weight: 300" onclick="ResetAll()">
+        <u>Reset All Boxes</u>
+      </p>
       <div class="square">
         <h2 class="title">Main Setup</h2>
-        <ul class="list">
-          <li class="text">
-            <span class="bold">Motherboard: </span>Asrock B450m Pro 4
-            <a class="affiliate" href="https://amzn.to/3tT0DPY">(Here)</a>
-          </li>
-          <li class="text">
-            <span class="bold">CPU: </span>Ryzen 5 2600
-            <a class="affiliate" href="https://amzn.to/3q4iiD3">(Here)</a>
-          </li>
-          <li class="text">
-            <span class="bold">Cooler: </span>Hyper 212 (Black Edition)
-            <a class="affiliate" href="https://amzn.to/3MNtBcM">(Here)</a>
-          </li>
-          <li class="text">
-            <span class="bold">RAM: </span>Corsair Vengence LPX 32GB Black (4X8)
-            <a class="affiliate" href="https://amzn.to/3tXau7g">(Here)</a>
-          </li>
-          <li class="text">
-            <span class="bold">GPU: </span>Nvidia RTX 2060
-            <a class="affiliate" href="https://amzn.to/3MGzQPk">(Here)</a>
-          </li>
-          <li class="text">
-            <span class="bold">PSU: </span>Corsair RM 750
-            <a class="affiliate" href="https://amzn.to/3Jd3I3F">(Here)</a>
-          </li>
-          <li class="text">
-            <span class="bold">Storage: </span>240GB SSD
-            <a class="affiliate" href="https://amzn.to/3tRcVII">(Here)</a>
-          </li>
-          <li class="text">
-            <span class="bold">Other Drives: </span>1TB SSD, 2TB HDD
-          </li>
-          <li class="text">
-            <span class="bold">Case: </span>Corsair 4000D (White)
-            <a class="affiliate" href="https://amzn.to/3I3FJT7">(Here)</a>
-          </li>
-        </ul>
-        <h3 class="subtitle">Monitors:</h3>
-        <ul class="list">
-          <li class="text">
-            <span class="bold">Main Monitor: </span>BenQ Zowie 144hz (1920x1080)
-            <a class="affiliate" href="https://amzn.to/37g89wv">(Here)</a>
-          </li>
-          <li class="text">
-            <span class="bold">Secondary: </span>Dell SE2219H (1920x1080)
-            <a class="affiliate" href="https://amzn.to/37toVIM">(Here)</a>
-          </li>
-          <li class="text">
-            <span class="bold">Mounting </span>Cheap arm of amazon and a vesa
-            adapter that just essentaily grabs the monitor for the secondary
-            monitor
-          </li>
-        </ul>
+        <p id="1" class="Expand">Expand</p>
+        <div id="1hide" class="hidden">
+          <h3 class="subtitle">Computer:</h3>
+          <ul class="list">
+            <li class="text">
+              <span class="bold">Motherboard: </span>Asrock B450m Pro 4
+              <a class="affiliate" href="https://amzn.to/3tT0DPY">(Here)</a>
+            </li>
+            <li class="text">
+              <span class="bold">CPU: </span>Ryzen 5 2600
+              <a class="affiliate" href="https://amzn.to/3q4iiD3">(Here)</a>
+            </li>
+            <li class="text">
+              <span class="bold">Cooler: </span>Hyper 212 (Black Edition)
+              <a class="affiliate" href="https://amzn.to/3MNtBcM">(Here)</a>
+            </li>
+            <li class="text">
+              <span class="bold">RAM: </span>Corsair Vengence LPX 32GB Black
+              (4X8)
+              <a class="affiliate" href="https://amzn.to/3tXau7g">(Here)</a>
+            </li>
+            <li class="text">
+              <span class="bold">GPU: </span>Nvidia RTX 2060
+              <a class="affiliate" href="https://amzn.to/3MGzQPk">(Here)</a>
+            </li>
+            <li class="text">
+              <span class="bold">PSU: </span>Corsair RM 750
+              <a class="affiliate" href="https://amzn.to/3Jd3I3F">(Here)</a>
+            </li>
+            <li class="text">
+              <span class="bold">Storage: </span>240GB SSD
+              <a class="affiliate" href="https://amzn.to/3tRcVII">(Here)</a>
+            </li>
+            <li class="text">
+              <span class="bold">Other Drives: </span>1TB SSD, 2TB HDD
+            </li>
+            <li class="text">
+              <span class="bold">Case: </span>Corsair 4000D (White)
+              <a class="affiliate" href="https://amzn.to/3I3FJT7">(Here)</a>
+            </li>
+          </ul>
+          <h3 class="subtitle">Monitors:</h3>
+          <ul class="list">
+            <li class="text">
+              <span class="bold">Main Monitor: </span>BenQ Zowie 144hz
+              (1920x1080)
+              <a class="affiliate" href="https://amzn.to/37g89wv">(Here)</a>
+            </li>
+            <li class="text">
+              <span class="bold">Secondary: </span>Dell SE2219H (1920x1080)
+              <a class="affiliate" href="https://amzn.to/37toVIM">(Here)</a>
+            </li>
+            <li class="text">
+              <span class="bold">Mounting </span>Cheap arm of amazon and a vesa
+              adapter that just essentaily grabs the monitor for the secondary
+              monitor
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="square">
         <h2 class="title">Laptop</h2>
-        <ul class="list">
-          <li class="text">
-            <span class="bold">Motherboard: </span>Idk (it is a laptop)
-          </li>
-          <li class="text"><span class="bold">CPU: </span>Intel i5 9300h</li>
-          <li class="text">
-            <span class="bold">Cooler: </span>Standard bad laptop cooling
-          </li>
-          <li class="text"><span class="bold">RAM: </span>8GB</li>
-          <li class="text"><span class="bold">GPU: </span></li>
-          Nvidia GTX 1660ti
-          <li class="text"><span class="bold">PSU: </span></li>
-          It just has a power brick on the cable
-          <li class="text">
-            <span class="bold">Storage: </span>256GB NVMe SSD, 1TB HDD
-          </li>
-          <li class="text">
-            <span class="bold">Model: </span>Acer Predator Helios 300
-          </li>
-        </ul>
-      </div>
-      <div class="square">
-        <h2 class="title">Mobile Devices</h2>
-        <p class="text">Coming Soon</p>
+        <p id="2" class="Expand">Expand</p>
+        <div id="2hide" class="hidden">
+          <ul class="list">
+            <li class="text">
+              <span class="bold">Motherboard: </span>Idk (it is a laptop)
+            </li>
+            <li class="text"><span class="bold">CPU: </span>Intel i5 9300h</li>
+            <li class="text">
+              <span class="bold">Cooler: </span>Standard bad laptop cooling
+            </li>
+            <li class="text"><span class="bold">RAM: </span>8GB</li>
+            <li class="text"><span class="bold">GPU: </span></li>
+            Nvidia GTX 1660ti
+            <li class="text"><span class="bold">PSU: </span></li>
+            It just has a power brick on the cable
+            <li class="text">
+              <span class="bold">Storage: </span>256GB NVMe SSD, 1TB HDD
+            </li>
+            <li class="text">
+              <span class="bold">Model: </span>Acer Predator Helios 300
+            </li>
+          </ul>
+          <p>
+            There are no links here because I can't find the laptop on amazon
+            and all the parts are mobile only and not available to the general
+            public
+          </p>
+        </div>
       </div>
     </div>
 
@@ -169,5 +182,30 @@
         from <a href="pexels.com" class="link">Pexels</a>
       </p>
     </div>
+
+    <!--Scripts-->
+    <script>
+      const onClick = function () {
+        var elementID = this.id;
+        var formulatedString = this.id + "hide"; //string should be idhide for the element that should be hidden
+        var element = document.getElementById(formulatedString);
+        if (element.className == "hidden") {
+          element.className = "";
+          document.getElementById(this.id).innerHTML = "Hide";
+        } else {
+          element.className = "hidden";
+          document.getElementById(this.id).innerHTML = "Expand";
+        }
+      };
+      for (i = 1; i < 4; i++) {
+        document.getElementById(i).onclick = onClick;
+      }
+      function ResetAll() {
+        for (i = 1; i < 4; i++) {
+          document.getElementById(i + "hide").className = "hidden";
+          document.getElementById(i).innerHTML = "Expand";
+        }
+      }
+    </script>
   </body>
 </html>

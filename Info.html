@@ -32,7 +32,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/landing.css" />
+    <link rel="stylesheet" href="/css/longform.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -72,7 +72,11 @@
       content="https://tomhasawebsite.com/images/landing.jpg"
     />
   </head>
-  <body onresize="StopResize()">
+  <body
+    onload="WindowInfo();Scroll()"
+    onresize="WindowInfo()"
+    onscroll="Scroll()"
+  >
     <header>
       <!--Navigation-->
       <div class="navbar">
@@ -96,37 +100,46 @@
       </div>
 
       <!--header text-->
-      <div class="landing" onscroll="myepicfunction()">
-        <h1 class="title">Hello, there!</h1>
+      <div class="landing">
+        <h1 class="title">Information</h1>
         <p id="date" class="text"></p>
       </div>
     </header>
 
     <!--Container with squares and text-->
     <div class="container">
-      <div class="square">
-        <h2 class="title">Projects</h2>
-        <p class="text">
-          This page has many of the interesting projects that I worked on
-        </p>
-        <a href="/html/projects.html" class="read-more">Read More</a>
+      <div class="square" id="1">
+        <h2 class="title">Window Info</h2>
+        <div id="1hide" class="hidden">
+          <h3 class="subtitle">Window Size</h3>
+          <p id="WindowWidth" style="line-height: 10px">Loading...</p>
+          <p id="WindowHeight" style="line-height: 10px">Loading...</p>
+          <p id="OWindowWidth" style="line-height: 10px">Loading...</p>
+          <p id="OWindowHeight" style="line-height: 10px">Loading...</p>
+          <h3 class="subtitle">Scroll values</h3>
+          <p id="scrollX" style="line-height: 10px">Loading...</p>
+          <p id="scrollY" style="line-height: 10px">Loading...</p>
+        </div>
       </div>
       <div class="square">
-        <h2 class="title">Computer Specs</h2>
-        <p class="text">
-          This page is dedicated to documenting the specs of my computers if you
-          want to build your own computer then I will link to the parts that I
-          used.
-        </p>
-        <a href="/html/specs.html" class="read-more">Read More</a>
+        <h2 class="title">IP/Useragent</h2>
+        <h3 id="IP"></h3>
+        <h3 id="UserAgent"></h3>
       </div>
-      <div class="square">
-        <h2 class="title">Changelog</h2>
-        <p class="text">
-          The page where I document what I have changed on the website and the
-          plans that I have for the website
+      <div class="square" id="1">
+        <h2 class="title">Disclaimer</h2>
+        <p>
+          This information is gathered from the client but does send out
+          requests to APIs but none of this information will reach my server
+          based on you going on this page.
         </p>
-        <a href="/html/changelog.html" class="read-more">Read More</a>
+        <p>
+          This code is opensource so if you have any issues please go onto
+          <a href="https://github.com/tommacode/WebsiteRemake" class="read-more"
+            >Github</a
+          >
+          and read the source code
+        </p>
       </div>
     </div>
 
@@ -148,35 +161,44 @@
         >
         from <a href="pexels.com" class="link">Pexels</a>
       </p>
-      <button onclick="experimentalWarn()">Info about yourself</button>
     </div>
 
     <!--Scripts-->
     <script>
-      //Says have a nice and whatever day of the week it is
-      const weekday = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-      ];
-
-      const d = new Date();
-      let day = weekday[d.getDay()];
-      console.log(day);
-      document.getElementById("date").innerHTML = "Have a nice " + day + "!";
+      function WindowInfo() {
+        //Inner sizes
+        document.getElementById("WindowWidth").innerHTML =
+          "Inner Window Width: " + window.innerWidth;
+        document.getElementById("WindowHeight").innerHTML =
+          "Inner Window Height: " + window.innerHeight;
+        //Outer Sizes
+        document.getElementById("OWindowWidth").innerHTML =
+          "Outer Window Width: " + window.outerWidth;
+        document.getElementById("OWindowHeight").innerHTML =
+          "Outer Window Height: " + window.innerHeight;
+      }
+      function Scroll() {
+        document.getElementById("scrollX").innerHTML = window.scrollX;
+        document.getElementById("scrollY").innerHTML = window.scrollY;
+      }
     </script>
     <script>
-      //Warns a user before going to the experimental pages
-      function experimentalWarn() {
-        alert(
-          "You are about to enter a page that might show info like your IP address, don't be livestreaming at the same time"
-        );
-        window.location.href = "Info.html";
-      }
+      const onClick = function () {
+        var elementID = this.id;
+        var formulatedString = this.id + "hide";
+        var element = document.getElementById(formulatedString);
+        if (element.className == "hidden") {
+          element.className = "";
+        } else {
+          element.className = "hidden";
+        }
+      };
+      document.getElementById("1").onclick = onClick;
+      document.getElementById("2").onclick = onClick;
+      document.getElementById("3").onclick = onClick;
+    </script>
+    <script>
+      //IP
     </script>
   </body>
 </html>

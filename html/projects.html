@@ -66,38 +66,57 @@
     <!--Container with squares and text-->
 
     <div class="container">
+      <h2 class="title" style="text-align: center; font-weight: 500">
+        Projects
+      </h2>
+      <p class="text" style="text-align: center; font-weight: 300">
+        This page is dedicated to documenting some of the projects that I have
+        done. However not all the projects that I do will be on here because I
+        havent added them yet
+      </p>
+      <p style="font-weight: 300" onclick="ResetAll()">
+        <u>Reset All Boxes</u>
+      </p>
       <div class="square">
         <h2 class="title">Future Planning</h2>
-        <ul>
-          <li>Add more content to this page</li>
-          <li>Add FAQ or about me to the first page</li>
-        </ul>
+        <p id="1" class="Expand">Expand</p>
+        <div id="1hide" class="hidden">
+          <ul class="list">
+            <li>Add more content to this page</li>
+            <li>Add FAQ or about me to the first page</li>
+          </ul>
+        </div>
       </div>
       <div class="square">
         <h2 class="title">The previous version of the website</h2>
-        <p class="text">
-          This website had an Apple aesthetic. As in it was very minimal and
-          very clean. Here are some screenshots from the website: I decided to
-          change the website because it was very difficult to update.
-          <span class="bold">It was also light mode</span>. FYI if you want to
-          have a look through the website you can go through the source code
-          <a href="https://github.com/tommacode/Website" class="read-more"
-            >on github</a
-          >
-          <br />
-          <img src="../images/Projects/PreviousSite/Landing.png" alt="" />
-          <img src="../images/Projects/PreviousSite/Setups.png" alt="" />
-        </p>
+        <p id="2" class="Expand">Expand</p>
+        <div id="2hide" class="hidden">
+          <p class="text">
+            This website had an Apple aesthetic. As in it was very minimal and
+            very clean. Here are some screenshots from the website: I decided to
+            change the website because it was very difficult to update.
+            <span class="bold">It was also light mode</span>. FYI if you want to
+            have a look through the website you can go through the source code
+            <a href="https://github.com/tommacode/Website" class="read-more"
+              >on github</a
+            >
+            <br />
+            <img src="../images/Projects/PreviousSite/Landing.png" alt="" />
+            <img src="../images/Projects/PreviousSite/Setups.png" alt="" />
+          </p>
+        </div>
       </div>
-
       <div class="square">
         <h2 class="title">The original site</h2>
-        <p class="text">
-          This site was hosted on 000webhostapp. The site was terrible, I used a
-          template and this was wordpress. The domain was tommee.me. I am
-          writing this because the domain just expired and I couldn't be
-          bothered to renew it.
-        </p>
+        <p id="3" class="Expand">Expand</p>
+        <div id="3hide" class="hidden">
+          <p class="text">
+            This site was hosted on 000webhostapp. The site was terrible, I used
+            a template and this was wordpress. The domain was tommee.me. I am
+            writing this because the domain just expired and I couldn't be
+            bothered to renew it.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -120,5 +139,30 @@
         from <a href="pexels.com" class="link">Pexels</a>
       </p>
     </div>
+
+    <!--Scrips-->
+    <script>
+      const onClick = function () {
+        var elementID = this.id;
+        var formulatedString = this.id + "hide"; //string should be idhide for the element that should be hidden
+        var element = document.getElementById(formulatedString);
+        if (element.className == "hidden") {
+          element.className = "";
+          document.getElementById(this.id).innerHTML = "Hide";
+        } else {
+          element.className = "hidden";
+          document.getElementById(this.id).innerHTML = "Expand";
+        }
+      };
+      for (i = 1; i < 4; i++) {
+        document.getElementById(i).onclick = onClick;
+      }
+      function ResetAll() {
+        for (i = 1; i < 4; i++) {
+          document.getElementById(i + "hide").className = "hidden";
+          document.getElementById(i).innerHTML = "Expand";
+        }
+      }
+    </script>
   </body>
 </html>
