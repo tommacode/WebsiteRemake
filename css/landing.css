@@ -180,6 +180,7 @@ header::before {
 
 .square .text {
   font-weight: var(--fw-text);
+  margin-top: 5vh;
 }
 
 .square .read-more {
@@ -271,38 +272,18 @@ header::before {
 }
 
 /* media statements */
-@media only screen and (max-width: 1200px) {
-  .square {
-    margin-right: 1vw;
-    margin-left: 1vw;
-    background-color: #35363a;
-    border-radius: 1vw;
-    padding: 1vh;
-    margin-top: 1vh;
-    box-shadow: 0px 0px 18px -3px rgba(255, 255, 255, 0.1);
-    text-align: center;
-    padding-bottom: 2vh;
-  }
-}
 
-@media only screen and (max-width: 800px) {
-  .footer {
-    padding-top: 90vh;
-  }
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
   .logo {
     display: none;
   }
   .nav {
-    float: none;
+    float: right;
     text-align: center;
     padding-left: 0;
-    padding-right: 0;
   }
   .nav-link {
-    font-size: 3.5vw;
+    font-size: 1em;
     text-align: center;
   }
   .landing {
@@ -311,7 +292,18 @@ header::before {
   .landing .text {
     text-align: center;
   }
+  img {
+    display: none;
+  }
   .footer {
-    padding-top: 159vh;
+    padding-top: 120vh;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .nav {
+    float: right;
+    text-align: center;
+    padding-right: 7.5vw;
   }
 }

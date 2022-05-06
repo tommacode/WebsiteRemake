@@ -30,11 +30,11 @@ body {
   font-weight: var(--fw-text);
   float: left;
   padding-left: 3vw;
-  padding-top: 2.5vh;
+  padding-top: 0.5cm;
 }
 
 .navbar {
-  height: 7.5vh;
+  height: 1.75cm;
   background-color: var(--clr-background);
   position: sticky;
   background-color: var(--clr-background);
@@ -44,13 +44,12 @@ body {
 .nav {
   display: inline;
   display: flex;
-  padding-top: 0.7vh;
+  padding-top: 0.5cm;
   list-style: none;
   float: right;
   padding-right: 4vw;
   font-weight: var(--fw-titles);
   margin: 0;
-  padding-top: 2vh;
 }
 
 .nav-button {
@@ -165,7 +164,7 @@ header::before {
 
 .square .text {
   font-weight: var(--fw-text);
-
+  padding-top: 2vh;
 }
 
 .square .read-more {
@@ -233,7 +232,7 @@ img {
 }
 
 /* Text Modification */
-.bold {
+b {
   font-weight: var(--fw-titles);
 }
 
@@ -267,25 +266,24 @@ img {
     outline-style: solid;
     outline-width: 2.5px;
     outline-color: white;
-    padding: 10px;
+    padding: 7.5px;
     border-radius: 8px;
   }
 }
 
 /* media statements */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
   .logo {
     display: none;
   }
   .nav {
-    float: none;
+    float: right;
     text-align: center;
     padding-left: 0;
-    padding-right: 0;
   }
   .nav-link {
-    font-size: 3.5vw;
+    font-size: 1em;
     text-align: center;
   }
   .landing {

@@ -72,7 +72,7 @@
       content="https://tomhasawebsite.com/images/landing.jpg"
     />
   </head>
-  <body onscroll="Scroll()" onload="Scroll()">
+  <body>
     <header>
       <!--Navigation-->
       <div class="navbar">
@@ -96,8 +96,8 @@
       </div>
 
       <!--header text-->
-      <div class="landing" onscroll="myepicfunction()">
-        <h1 class="title">Hello, there!</h1>
+      <div class="landing">
+        <h1 class="title">Hello!</h1>
         <p id="date" class="text"></p>
       </div>
     </header>
@@ -135,10 +135,10 @@
       <h3 class="title">Thanks for visiting</h3>
       <div class="icon-container">
         <a href="https://github.com/tommacode/WebsiteRemake"
-          ><img class="icon" src="/images/github.png" alt=""
+          ><img class="icon" src="/images/github.png" alt="Github Icon"
         /></a>
         <a href="https://www.instagram.com/itstom.bl01/"
-          ><img class="icon" src="/images/instagram.png" alt=""
+          ><img class="icon" src="/images/instagram.png" alt="Instagram Icon"
         /></a>
       </div>
       <p class="text">
@@ -176,13 +176,6 @@
           "You are about to enter a page that might show info like your IP address, don't be livestreaming at the same time"
         );
         window.location.href = "Info.html";
-      }
-    </script>
-    <script>
-      //float in
-      function Scroll() {
-        document.getElementById("scrollX").innerHTML = window.scrollX;
-        document.getElementById("scrollY").innerHTML = window.scrollY;
       }
     </script>
   </body>
