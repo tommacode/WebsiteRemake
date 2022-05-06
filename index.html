@@ -72,7 +72,7 @@
       content="https://tomhasawebsite.com/images/landing.jpg"
     />
   </head>
-  <body onresize="StopResize()">
+  <body onscroll="Scroll()" onload="Scroll()">
     <header>
       <!--Navigation-->
       <div class="navbar">
@@ -176,6 +176,13 @@
           "You are about to enter a page that might show info like your IP address, don't be livestreaming at the same time"
         );
         window.location.href = "Info.html";
+      }
+    </script>
+    <script>
+      //float in
+      function Scroll() {
+        document.getElementById("scrollX").innerHTML = window.scrollX;
+        document.getElementById("scrollY").innerHTML = window.scrollY;
       }
     </script>
   </body>
