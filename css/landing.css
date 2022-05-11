@@ -180,7 +180,6 @@ header::before {
 
 .square .text {
   font-weight: var(--fw-text);
-  margin-top: 5vh;
 }
 
 .square .read-more {
