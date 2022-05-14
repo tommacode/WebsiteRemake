@@ -267,13 +267,12 @@ header::before {
     display: none;
   }
   .nav {
-    float: none;
+    float: right;
     text-align: center;
     padding-left: 0;
-    padding-right: 0;
   }
   .nav-link {
-    font-size: 3.5vw;
+    font-size: 1em;
     text-align: center;
   }
   .landing {
@@ -281,5 +280,19 @@ header::before {
   }
   .landing .text {
     text-align: center;
+  }
+  img {
+    display: none;
+  }
+  .footer {
+    padding-top: 120vh;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .nav {
+    float: right;
+    text-align: center;
+    padding-right: 7.5vw;
   }
 }
