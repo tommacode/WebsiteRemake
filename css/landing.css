@@ -83,32 +83,10 @@ body {
 
 /* Header */
 header {
-  box-sizing: border-box;
-  height: 100vh;
-  position: relative;
-  transform-style: inherit;
-  width: 100vw;
+  background-image: url(/images/landing.jpg);
   text-align: center;
-}
-
-header,
-header:before {
-  background: 50% 50% / cover;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: block;
-  background: url(/images/landing.jpg);
+  height: 100vh;
   background-size: cover;
-  transform-origin: center center 0;
-  transform: translateZ(-1px) scale(2);
-  z-index: -1;
 }
 
 .landing {
@@ -251,6 +229,7 @@ header::before {
     padding: 10px;
     border-radius: 8px;
   }
+
   to {
     background-color: #35363a;
     outline-style: solid;
@@ -266,24 +245,30 @@ header::before {
   .logo {
     display: none;
   }
+
   .nav {
     float: right;
     text-align: center;
     padding-left: 0;
   }
+
   .nav-link {
     font-size: 1em;
     text-align: center;
   }
+
   .landing {
     text-align: center;
   }
+
   .landing .text {
     text-align: center;
   }
+
   img {
     display: none;
   }
+
   .footer {
     padding-top: 120vh;
   }
