@@ -2,7 +2,7 @@
 
 ## Welcome to my open source website
 
-These are just plain html files with css images and some javascript. There is no backend handling.
+These are just plain html files with css images and some javascript. There is no backend handling. No longer with a paralax background
 
 ## Issues
 
